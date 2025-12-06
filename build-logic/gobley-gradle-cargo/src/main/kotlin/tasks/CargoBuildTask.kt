@@ -95,6 +95,11 @@ abstract class CargoBuildTask : CargoPackageTask() {
             if (nativeStaticLibsDefFile.isPresent) {
                 arguments("--print", "native-static-libs")
             }
+
+            if (target.rustTriple == "aarch64-unknown-linux-gnu") {
+                additionalEnvironment("CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER", "aarch64-linux-gnu-gcc")
+            }
+
             suppressXcodeIosToolchains()
             captureStandardError()
             captureStandardOutput()
