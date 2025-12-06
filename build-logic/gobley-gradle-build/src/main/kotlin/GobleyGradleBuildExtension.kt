@@ -67,10 +67,13 @@ private fun Project.configureProjectProperties(
         ).asFile
     )
     group = "dev.gobley.gradle"
+    /*
     version = when {
         bindgenManifest.version.contains('-') -> bindgenManifest.version.substringBefore('-') + "-SNAPSHOT"
         else -> bindgenManifest.version
     }
+     */
+    version = "${bindgenManifest.version}-szsoftware"
     this.description = description
 }
 
