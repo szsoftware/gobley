@@ -25,9 +25,9 @@ uniffi {
 
 kotlin {
     explicitApi()
-    compilerOptions {
-        jvmTarget = JvmTarget.JVM_17
-    }
+
+    jvmToolchain(17)
+
     sourceSets {
         test {
             dependencies {
