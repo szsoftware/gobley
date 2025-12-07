@@ -30,7 +30,7 @@ to invoke the bindgen, run:
 gobley-uniffi-bindgen --lib-file <path-to-library-file> --out-dir <output-directory> --crate <crate-name> <path-to-udl-file>
 ```
 
-If you want to use the bindgen in your own Crago build script, please read the
+If you want to use the bindgen in your own Cargo build script, please read the
 ["Generating foreign-language bindings" part](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html)
 in the official UniFFI documentation.
 
